@@ -10,11 +10,13 @@ function button(params) {
                 $dropdownButton[i].classList.remove('dropdown-icon-down');
                 $dropdownButton[i].classList.add('dropdown-icon-up');
                 $submenuWrap[0].classList.remove('display');
+                gsap.to($submenuWrap[0], {duration:0.5, ease:'power1.out'})
             }
             else{
                 $dropdownButton[i].classList.add('dropdown-icon-down');
                 $dropdownButton[i].classList.remove('dropdown-icon-up');
                 $submenuWrap[0].classList.add('display');
+                gsap.to($submenuWrap[0], {duration:0.5, ease:'power1.out'})
             }
             // i번째 이외의 다른 버튼을 눌렀을 때, 버튼 모양을 바꿔주는 이벤트
             for (let j = 0; j < $dropdownButton.length; j++) {
